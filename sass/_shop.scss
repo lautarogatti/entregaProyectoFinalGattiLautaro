@@ -1,0 +1,105 @@
+@import "variables";
+@import "breakpoints";
+// mobile first 0px-500px
+body{
+    main{
+        .contenedor-productos{
+            .producto{
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                padding-top: 1em;
+                padding-bottom: 1em;
+                .contenedor-img-producto{
+                    box-sizing: border-box;
+                    width: 77%;
+                    background-color: rgb(7,7,7);
+                    border: 3px solid $color_bordes;
+                    margin-bottom: 1em;
+                    .img-producto{
+                        width: 100%;
+                    }
+                }
+                .contenedor-nombre-producto{
+                    margin-bottom: 1em;
+                    .nombre-producto{
+                        font-family: 'Oswald', sans-serif;
+                    }
+                }
+                .contenedor-precio-producto{
+                    margin-bottom: 1em;
+                    .precio-producto{
+                        font-weight: bold;
+                    }
+                }
+                .contenedor-botones-compra{
+                    margin-bottom: 1em;
+                    box-sizing: border-box;
+                    width: 50%;
+                    ul{
+                        list-style-type: none;
+                        display: flex;
+                        flex-direction: row;
+                        justify-content: space-evenly;
+                        padding-left: 0 !important;
+                        .botones-compra{
+                            padding: $padding_boton;
+                            background-color: $color_boton;
+                            font-weight: bold;
+                            color: white;
+                            text-decoration: none;
+                            border: 2px solid transparent;
+                            border-radius: 3px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@include tablet{
+    body{
+        main{
+            .contenedor-productos{
+                .producto{
+                    .contenedor-img-producto{
+                        width: 60%;
+                    }
+                    .contenedor-botones-compra{
+                        width: 30%;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@include pc{
+    body{
+        main{
+            .contenedor-productos{
+                display: flex;
+                flex-direction: row;
+                justify-content: space-around;
+                flex-wrap: wrap;
+
+                .producto{
+                    box-sizing: border-box;
+                    width: 28%;
+                    .contenedor-img-producto{
+                        width: 100%
+                    }
+                    .contenedor-botones-compra{
+                        width: 70%;
+                        .botones-compra{
+                            &:hover{
+                                border: 2px solid white;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

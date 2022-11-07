@@ -1,0 +1,28 @@
+@import "breakpoints";
+// mobile first 0px-500px
+body{
+    footer {
+        background-color: #303030;
+        section{
+            .footer-derechos {
+                text-align: center;
+                padding-top: 10px;
+            }
+        }
+        .contenedor-redes {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+        }
+    }
+}
+
+@include pc{
+    body{
+        footer{
+            .contenedor-redes{
+                justify-content: right;
+            }
+        }
+    }
+}

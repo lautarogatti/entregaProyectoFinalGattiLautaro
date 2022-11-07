@@ -1,0 +1,132 @@
+@import "variables";
+@import "breakpoints";
+// mobile first 0px-500px
+body{
+    .envoltura-titulo-gigante{
+        .contenedor-titulo-gigante{
+            width: 77%;
+        }
+    }
+    .main-seccion-discography{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        box-sizing: border-box;
+        width: 100%;
+        background: linear-gradient(0deg, rgba(7,7,7,0.8183648459383753) 0%, rgba(0,0,0,1) 50%, rgba(7,7,7,0.4962359943977591) 100%);
+        .contenedor-album{
+            box-sizing: border-box;
+            width: 100%;
+            display: grid;
+            flex-direction: row;
+            padding: 0.2em;
+            margin-bottom: 1em;
+            margin-top: 1em;
+            grid-template-areas: 
+            "titulo"
+            "imagen"
+            "tracklist";
+            .envoltura-imagen-album{
+                grid-area: imagen;
+                display: flex;
+                flex-direction: row;
+                justify-content: center;
+                .contenedor-imagen-album{
+                    box-sizing: border-box;
+                    width: 70%;
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    .img-album{
+                        width: 100%;
+                        border: 3px solid $color_bordes;
+                        padding: 2px;
+                    }
+                }
+            }
+            .contenedor-titulo-album{
+                grid-area: titulo;
+                .titulo-album{
+                    font-family: 'Oswald', sans-serif;
+                    grid-area: titulo;
+                    font-size: 1.5em;
+                    text-align: center;
+                }
+            }
+            .contenedor-tracklist-album{
+                grid-area: tracklist;
+                margin: 0.5em;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                .titulo{
+                    text-align: center;
+                    font-family: 'Oswald', sans-serif;
+                    font-weight: bold;
+                    color: $color_titulos;
+                    font-size: 1.3em;
+                    margin-bottom: 2em;
+                }
+                .contenedor-lista{
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    padding-left: 0.5em;
+                    box-sizing: border-box;
+                    width: 70%;
+                    li{
+                        list-style-type: none;
+                        font-family: 'Roboto Condensed', sans-serif;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@include tablet{
+    body{
+        .main-seccion-discography{
+            .contenedor-album{
+                .envoltura-imagen-album{
+                    .contenedor-imagen-album{
+                        .img-album{
+                            width: 70%;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@include pc{
+    body{
+        .main-seccion-discography{
+            .contenedor-album{
+                grid-template-areas:
+                "titulo titulo titulo titulo"
+                "imagen imagen tracklist tracklist";
+                grid-template-columns: 1fr 1fr 1fr 1fr;
+                .envoltura-imagen-album{
+                    .contenedor-imagen-album{
+                        width: 100%;
+                        align-items: flex-end;
+                        justify-content: center;
+                        .img-album{
+                            width: 70%;
+                        }
+                    }
+                }
+                .contenedor-titulo-album{
+                    margin-bottom: 2em;
+                }
+            }
+            .contenedor-tracklist-album{
+                .contenedor-lista{
+                    width: 100%;
+                }
+            }
+        }
+    }
+}

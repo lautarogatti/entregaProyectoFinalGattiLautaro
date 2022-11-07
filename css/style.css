@@ -1,0 +1,812 @@
+@import url("https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;700&family=Roboto+Condensed:wght@300;400;700&family=Roboto:wght@100;300;400;700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-image: url(../media/imgs/textura-fondo.jpg);
+  font-family: "Roboto", sans-serif !important;
+  color: aliceblue !important;
+}
+body .envoltura-titulo-gigante {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+body .envoltura-titulo-gigante .contenedor-titulo-gigante {
+  box-sizing: border-box;
+}
+body .envoltura-titulo-gigante .contenedor-titulo-gigante .titulo-gigante {
+  font-size: 3em;
+  font-weight: bold;
+}
+
+body header {
+  background: rgb(0, 0, 0);
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0) 0%, rgba(23, 23, 23, 0.706320028) 3%, rgb(48, 48, 48) 8%);
+  position: -webkit-sticky !important;
+  position: sticky !important;
+  top: 0;
+  padding-bottom: 1em;
+}
+body header .contenedor-logo {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  padding-bottom: 1em;
+  padding-top: 1em;
+}
+body header .contenedor-logo .logo {
+  width: 75%;
+}
+body header nav {
+  box-sizing: border-box;
+  width: 100%;
+  padding-bottom: 0.5em;
+}
+body header nav .contenedor-botones-nav {
+  list-style-type: none;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  padding-left: 0 !important;
+  margin-bottom: 0 !important;
+}
+body header nav .contenedor-botones-nav .botones-nav a {
+  color: white;
+  font-weight: bold;
+  text-decoration: none;
+  padding: 0.425em;
+  background-color: #563267;
+  border-radius: 3px;
+  border: 2px solid transparent;
+}
+
+@media (min-width: 500px) {
+  body header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  body header .contenedor-logo {
+    width: 70%;
+  }
+  body header nav {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  body header nav .contenedor-botones-nav {
+    box-sizing: border-box;
+    width: 50%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+  }
+}
+@media (min-width: 768px) {
+  body header .contenedor-logo .logo {
+    width: 45%;
+  }
+  body header nav .contenedor-botones-nav {
+    width: 40%;
+    justify-content: space-evenly;
+  }
+  body header nav .contenedor-botones-nav .botones-nav a:hover {
+    border: 2px solid white;
+  }
+}
+body main .noticias-index div h1 {
+  text-align: center;
+  padding-top: 1.5em;
+  padding-bottom: 1em;
+  font-weight: bold;
+  font-size: 40px;
+}
+body main .noticias-index .envoltura-noticias-main .noticia {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+body main .noticias-index .envoltura-noticias-main .noticia .contenedor-imagen-noticia {
+  box-sizing: border-box;
+  width: 75%;
+  border: 1px solid #333267;
+  padding: 6px;
+}
+body main .noticias-index .envoltura-noticias-main .noticia .contenedor-imagen-noticia .img-noticia {
+  width: 100%;
+}
+body main .noticias-index .envoltura-noticias-main .noticia .contenedor-imagen-noticia .img-noticia:hover {
+  opacity: 0.5;
+  transition: 0.5s;
+}
+body main .noticias-index .envoltura-noticias-main .noticia .titulo-noticia h2 {
+  font-family: "Oswald", sans-serif !important;
+  text-align: center;
+  color: #333267;
+}
+body main .noticias-index .envoltura-noticias-main .noticia .contenedor-texto-noticia .texto-noticia {
+  border-left: solid #333267 5px;
+  padding: 5px;
+  margin-left: 1em;
+  font-family: "Roboto Condensed", sans-serif;
+}
+body main .noticias-index .envoltura-noticias-main .noticia .contenedor-boton-video {
+  padding-top: 1em;
+  padding-bottom: 1em;
+}
+body main .noticias-index .envoltura-noticias-main .noticia .contenedor-boton-video .boton-watch-now {
+  padding: 0.425em;
+  background-color: #563267;
+  font-weight: bold;
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  border: 2px solid transparent;
+  border-radius: 3px;
+}
+body main .noticias-index .contenedor-boton-more-news {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+body main .noticias-index .contenedor-boton-more-news .boton-more-news {
+  padding: 0.425em;
+  background-color: #563267;
+  font-weight: bold;
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  border: 2px solid transparent;
+  border-radius: 3px;
+}
+body main .tickets-main {
+  margin-top: 2em;
+  padding-top: 1em;
+  padding-bottom: 2em;
+  background: rgb(7, 7, 7);
+  background: linear-gradient(0deg, rgba(7, 7, 7, 0.8183648459) 0%, rgb(0, 0, 0) 50%, rgba(7, 7, 7, 0.4962359944) 100%);
+}
+body main .tickets-main .titulo-section-main h1 {
+  text-align: center;
+  padding-top: 1.5em;
+  padding-bottom: 1em;
+  font-weight: bold;
+  font-size: 40px;
+}
+body main .tickets-main .envoltura-tabla .fechas-tour-tabla .fechas-tour-celda-descripcion {
+  border-top: 1px solid rgba(255, 255, 255, 0.2);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+body main .tickets-main .envoltura-tabla .fechas-tour-tabla .fechas-tour-celda-descripcion .fechas-tour-data .fechas-tour-fecha {
+  font-weight: bolder;
+  text-align: center;
+  color: #333267;
+}
+body main .tickets-main .envoltura-tabla .fechas-tour-tabla .fechas-tour-celda-descripcion .fechas-tour-data .fechas-tour-fecha p {
+  margin-bottom: 0.5rem;
+}
+body main .tickets-main .envoltura-tabla .fechas-tour-tabla .fechas-tour-celda-descripcion .fechas-tour-data .fechas-tour-evento .fechas-tour-nombre-evento {
+  text-align: center;
+}
+body main .tickets-main .envoltura-tabla .fechas-tour-tabla .fechas-tour-celda-descripcion .fechas-tour-data .fechas-tour-evento .fechas-tour-nombre-evento p {
+  margin-bottom: 0.5rem;
+}
+body main .tickets-main .envoltura-tabla .fechas-tour-tabla .fechas-tour-celda-descripcion .fechas-tour-data .fechas-tour-evento .fechas-tour-ubicacion {
+  text-align: center;
+}
+body main .tickets-main .envoltura-tabla .fechas-tour-tabla .fechas-tour-celda-descripcion .fechas-tour-data .fechas-tour-evento .fechas-tour-ubicacion p {
+  margin-bottom: 0.5rem;
+}
+body main .tickets-main .envoltura-tabla .fechas-tour-tabla .fechas-tour-celda-descripcion .fechas-tour-data .boton-compra-tickets {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-bottom: 0.5em;
+}
+body main .tickets-main .envoltura-tabla .fechas-tour-tabla .fechas-tour-celda-descripcion .fechas-tour-data .boton-compra-tickets .boton-tickets {
+  padding: 0.425em;
+  background-color: #563267;
+  font-weight: bold;
+  text-decoration: none;
+  font-weight: bold;
+  color: white;
+  border: 2px solid transparent;
+  border-radius: 3px;
+}
+body main .tickets-main .envoltura-tabla .fechas-tour-tabla .contenedor-boton-more-dates {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  padding-bottom: 1em;
+  padding-top: 1em;
+}
+body main .tickets-main .envoltura-tabla .fechas-tour-tabla .contenedor-boton-more-dates .boton-more-dates {
+  padding: 0.425em;
+  background-color: #563267;
+  font-weight: bold;
+  color: white;
+  text-decoration: none;
+  border: 2px solid transparent;
+  border-radius: 3px;
+}
+body main .merch-main .titulo-section-main h1 {
+  text-align: center;
+  padding-top: 1.5em;
+  padding-bottom: 1em;
+  font-weight: bold;
+  font-size: 40px;
+}
+body main .merch-main .contenedor-productos .producto {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+body main .merch-main .contenedor-productos .producto .contenedor-img-producto {
+  box-sizing: border-box;
+  width: 50%;
+  background-color: rgb(7, 7, 7);
+  border: 3px solid #333267;
+}
+body main .merch-main .contenedor-productos .producto .contenedor-img-producto .img-producto {
+  width: 100%;
+}
+body main .merch-main .contenedor-productos .producto .contenedor-nombre-producto .nombre-producto {
+  font-family: "Oswald", sans-serif;
+}
+body main .merch-main .contenedor-productos .producto .contenedor-precio-producto .precio-producto {
+  font-weight: bold;
+}
+body main .merch-main .contenedor-productos .producto .contenedor-botones-compra {
+  box-sizing: border-box;
+  width: 50%;
+}
+body main .merch-main .contenedor-productos .producto .contenedor-botones-compra ul {
+  list-style-type: none;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  padding-left: 0 !important;
+}
+body main .merch-main .contenedor-productos .producto .contenedor-botones-compra ul .botones-compra {
+  padding: 0.425em;
+  background-color: #563267;
+  font-weight: bold;
+  color: white;
+  text-decoration: none;
+  border: 2px solid transparent;
+  border-radius: 3px;
+}
+body main .merch-main .contenedor-boton-more-merch {
+  padding-top: 1em;
+  padding-bottom: 1em;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+body main .merch-main .contenedor-boton-more-merch .boton-more-merch {
+  padding: 0.425em;
+  background-color: #563267;
+  font-weight: bold;
+  color: white;
+  text-decoration: none;
+  border: 2px solid transparent;
+  border-radius: 3px;
+}
+
+@media (min-width: 500px) {
+  body main .merch-main .contenedor-productos .producto .contenedor-botones-compra {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  body main .merch-main .contenedor-productos .producto .contenedor-botones-compra ul {
+    box-sizing: border-box;
+    width: 60%;
+  }
+}
+@media (min-width: 768px) {
+  body main .noticias-index .envoltura-noticias-main {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  body main .noticias-index .envoltura-noticias-main .noticia {
+    box-sizing: border-box;
+    width: 35%;
+  }
+  body main .noticias-index .envoltura-noticias-main .noticia .titulo-noticia h2 {
+    font-size: 25px;
+  }
+  body main .noticias-index .envoltura-noticias-main .noticia .contenedor-boton-video {
+    padding-top: 0;
+  }
+  body main .noticias-index .envoltura-noticias-main .noticia .contenedor-boton-video .boton-watch-now:hover {
+    border: 2px solid white;
+  }
+  body main .noticias-index .contenedor-boton-more-news {
+    padding-top: 2em;
+  }
+  body main .noticias-index .contenedor-boton-more-news .boton-more-news {
+    font-size: 20px;
+  }
+  body main .noticias-index .contenedor-boton-more-news .boton-more-news:hover {
+    border: 2px solid white;
+  }
+  body main .tickets-main .envoltura-tabla {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  body main .tickets-main .envoltura-tabla .fechas-tour-tabla {
+    box-sizing: border-box;
+    width: 75%;
+  }
+  body main .tickets-main .envoltura-tabla .fechas-tour-tabla .fechas-tour-celda-descripcion .fechas-tour-data {
+    display: grid;
+    grid-template-areas: "fecha fecha boton" "evento evento boton";
+    grid-template-columns: 1fr 1fr 1fr;
+    align-items: center;
+  }
+  body main .tickets-main .envoltura-tabla .fechas-tour-tabla .fechas-tour-celda-descripcion .fechas-tour-data .fechas-tour-fecha {
+    grid-area: fecha;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    text-align: center;
+  }
+  body main .tickets-main .envoltura-tabla .fechas-tour-tabla .fechas-tour-celda-descripcion .fechas-tour-data .fechas-tour-evento {
+    grid-area: evento;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  body main .tickets-main .envoltura-tabla .fechas-tour-tabla .fechas-tour-celda-descripcion .fechas-tour-data .boton-compra-tickets {
+    grid-area: boton;
+    padding-bottom: 0;
+  }
+  body main .tickets-main .envoltura-tabla .fechas-tour-tabla .fechas-tour-celda-descripcion .fechas-tour-data .boton-compra-tickets .boton-tickets:hover {
+    border: 2px solid white;
+  }
+  body main .tickets-main .envoltura-tabla .fechas-tour-tabla .contenedor-boton-more-dates .boton-more-dates {
+    font-size: 20px;
+  }
+  body main .tickets-main .envoltura-tabla .fechas-tour-tabla .contenedor-boton-more-dates .boton-more-dates:hover {
+    border: 2px solid white;
+  }
+  body main .merch-main .contenedor-productos {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+  }
+  body main .merch-main .contenedor-productos .producto {
+    box-sizing: border-box;
+    width: 33%;
+  }
+  body main .merch-main .contenedor-productos .producto .contenedor-img-producto {
+    width: 80%;
+  }
+  body main .merch-main .contenedor-productos .producto .contenedor-botones-compra {
+    width: 100%;
+  }
+  body main .merch-main .contenedor-productos .producto .contenedor-botones-compra .botones-compra:hover {
+    border: 2px solid white;
+  }
+  body main .merch-main .contenedor-boton-more-merch .boton-more-merch:hover {
+    border: 2px solid white;
+  }
+}
+body .envoltura-titulo-gigante .contenedor-titulo-gigante {
+  width: 77%;
+}
+body .main-seccion-news .envoltura-noticias {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+body .main-seccion-news .envoltura-noticias .noticia {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 1em;
+  padding-bottom: 1em;
+}
+body .main-seccion-news .envoltura-noticias .noticia .contenedor-imagen-noticia {
+  border: 1px solid #333267;
+  padding: 6px;
+  box-sizing: border-box;
+  width: 75%;
+}
+body .main-seccion-news .envoltura-noticias .noticia .contenedor-imagen-noticia .img-noticia {
+  width: 100%;
+}
+body .main-seccion-news .envoltura-noticias .noticia .contenedor-imagen-noticia .img-noticia:hover {
+  opacity: 0.5;
+  transition: 0.5s;
+}
+body .main-seccion-news .envoltura-noticias .noticia .titulo-noticia h2 {
+  font-family: "Oswald", sans-serif !important;
+  text-align: center;
+  color: #333267;
+}
+body .main-seccion-news .envoltura-noticias .noticia .contenedor-texto-noticia .texto-noticia {
+  border-left: solid #333267 5px;
+  padding: 5px;
+  margin-left: 1em;
+  font-family: "Roboto Condensed", sans-serif;
+}
+body .main-seccion-news .envoltura-noticias .noticia .contenedor-boton-video {
+  padding-top: 1em;
+}
+body .main-seccion-news .envoltura-noticias .noticia .contenedor-boton-video .boton-watch-now {
+  padding: 0.425em;
+  background-color: #563267;
+  font-weight: bold;
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  border: 2px solid transparent;
+  border-radius: 3px;
+}
+
+@media (min-width: 768px) {
+  body .main-seccion-news {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 1em;
+  }
+  body .main-seccion-news .envoltura-noticias {
+    box-sizing: border-box;
+    width: 80%;
+  }
+  body .main-seccion-news .envoltura-noticias .noticia {
+    display: grid;
+    grid-template-areas: "imagen titulo" "imagen texto";
+    justify-items: center;
+    border-top: 1px solid #333267;
+    border-bottom: 1px solid #333267;
+  }
+  body .main-seccion-news .envoltura-noticias .noticia .contenedor-imagen-noticia {
+    grid-area: imagen;
+  }
+  body .main-seccion-news .envoltura-noticias .noticia .titulo-noticia {
+    grid-area: titulo;
+  }
+  body .main-seccion-news .envoltura-noticias .noticia .titulo-noticia h2 {
+    text-decoration: underline;
+  }
+  body .main-seccion-news .envoltura-noticias .noticia .contenedor-texto-noticia {
+    grid-area: texto;
+  }
+  body .main-seccion-news .envoltura-noticias .noticia .contenedor-boton-video .boton-watch-now:hover {
+    border: 2px solid white;
+  }
+}
+body .envoltura-titulo-gigante .contenedor-titulo-gigante {
+  width: 77%;
+}
+body .envoltura-presentacion-tour {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 2em;
+}
+body .envoltura-presentacion-tour .contenedor-presentacion-tour {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-sizing: border-box;
+  width: 50%;
+  border: 6px double #333267;
+  padding: 5px;
+  background-color: black;
+}
+body .envoltura-presentacion-tour .contenedor-presentacion-tour .contenedor-imagen-tour {
+  box-sizing: border-box;
+  width: 100%;
+}
+body .envoltura-presentacion-tour .contenedor-presentacion-tour .contenedor-imagen-tour .img-tour {
+  width: 100%;
+}
+body .envoltura-presentacion-tour .contenedor-titulo-tour {
+  font-size: 30px;
+  text-align: center;
+  font-family: "Oswald", sans-serif;
+}
+body .main-seccion-tour .contenedor-titulo-tabla .titulo-tabla {
+  text-align: center;
+  padding-top: 1.5em;
+  padding-bottom: 1em;
+  font-weight: bold;
+  font-size: 40px;
+}
+body .main-seccion-tour .fechas-tour-tabla {
+  background: linear-gradient(0deg, rgba(7, 7, 7, 0.8183648459) 0%, rgb(0, 0, 0) 50%, rgba(7, 7, 7, 0.4962359944) 100%);
+}
+body .main-seccion-tour .fechas-tour-tabla .fechas-tour-celda-descripcion {
+  border-top: 1px solid rgba(255, 255, 255, 0.2);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+body .main-seccion-tour .fechas-tour-tabla .fechas-tour-celda-descripcion .fechas-tour-data .fechas-tour-fecha {
+  font-weight: bolder;
+  text-align: center;
+  color: #333267;
+}
+body .main-seccion-tour .fechas-tour-tabla .fechas-tour-celda-descripcion .fechas-tour-data .fechas-tour-fecha p {
+  margin-bottom: 0.5rem;
+}
+body .main-seccion-tour .fechas-tour-tabla .fechas-tour-celda-descripcion .fechas-tour-data .fechas-tour-evento .fechas-tour-nombre-evento {
+  text-align: center;
+}
+body .main-seccion-tour .fechas-tour-tabla .fechas-tour-celda-descripcion .fechas-tour-data .fechas-tour-evento .fechas-tour-nombre-evento p {
+  margin-bottom: 0.5rem;
+}
+body .main-seccion-tour .fechas-tour-tabla .fechas-tour-celda-descripcion .fechas-tour-data .fechas-tour-evento .fechas-tour-ubicacion {
+  text-align: center;
+}
+body .main-seccion-tour .fechas-tour-tabla .fechas-tour-celda-descripcion .fechas-tour-data .fechas-tour-evento .fechas-tour-ubicacion p {
+  margin-bottom: 0.5rem;
+}
+body .main-seccion-tour .fechas-tour-tabla .fechas-tour-celda-descripcion .fechas-tour-data .boton-compra-tickets {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-bottom: 0.5em;
+  padding-top: 0.5em;
+}
+body .main-seccion-tour .fechas-tour-tabla .fechas-tour-celda-descripcion .fechas-tour-data .boton-compra-tickets .boton-tickets {
+  padding: 0.425em;
+  background-color: #563267;
+  font-weight: bold;
+  text-decoration: none;
+  font-weight: bold;
+  color: white;
+  border: 2px solid transparent;
+  border-radius: 3px;
+}
+body .main-seccion-tour .contenedor-aviso {
+  font-family: "Oswald", sans-serif;
+  font-size: 30px;
+  text-align: center;
+  margin-top: 2em;
+  margin-bottom: 2em;
+}
+
+@media (min-width: 500px) {
+  body main .fechas-tour-tabla {
+    margin-left: 5em;
+    margin-right: 5em;
+  }
+}
+@media (min-width: 768px) {
+  body .envoltura-presentacion-tour .contenedor-presentacion-tour {
+    width: 35%;
+  }
+  body .main-seccion-tour .fechas-tour-tabla .fechas-tour-celda-descripcion .fechas-tour-data {
+    display: grid;
+    grid-template-areas: "fecha fecha boton" "evento evento boton";
+    grid-template-columns: 1fr 1fr 1fr;
+    align-items: center;
+  }
+  body .main-seccion-tour .fechas-tour-tabla .fechas-tour-celda-descripcion .fechas-tour-data .fechas-tour-fecha {
+    grid-area: fecha;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    text-align: center;
+  }
+  body .main-seccion-tour .fechas-tour-tabla .fechas-tour-celda-descripcion .fechas-tour-data .fechas-tour-evento {
+    grid-area: evento;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  body .main-seccion-tour .fechas-tour-tabla .fechas-tour-celda-descripcion .fechas-tour-data .boton-compra-tickets {
+    grid-area: boton;
+  }
+  body .main-seccion-tour .fechas-tour-tabla .fechas-tour-celda-descripcion .fechas-tour-data .boton-compra-tickets .boton-tickets:hover {
+    border: 2px solid white;
+  }
+}
+body .envoltura-titulo-gigante .contenedor-titulo-gigante {
+  width: 77%;
+}
+body .main-seccion-discography {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-sizing: border-box;
+  width: 100%;
+  background: linear-gradient(0deg, rgba(7, 7, 7, 0.8183648459) 0%, rgb(0, 0, 0) 50%, rgba(7, 7, 7, 0.4962359944) 100%);
+}
+body .main-seccion-discography .contenedor-album {
+  box-sizing: border-box;
+  width: 100%;
+  display: grid;
+  flex-direction: row;
+  padding: 0.2em;
+  margin-bottom: 1em;
+  margin-top: 1em;
+  grid-template-areas: "titulo" "imagen" "tracklist";
+}
+body .main-seccion-discography .contenedor-album .envoltura-imagen-album {
+  grid-area: imagen;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+body .main-seccion-discography .contenedor-album .envoltura-imagen-album .contenedor-imagen-album {
+  box-sizing: border-box;
+  width: 70%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+body .main-seccion-discography .contenedor-album .envoltura-imagen-album .contenedor-imagen-album .img-album {
+  width: 100%;
+  border: 3px solid #333267;
+  padding: 2px;
+}
+body .main-seccion-discography .contenedor-album .contenedor-titulo-album {
+  grid-area: titulo;
+}
+body .main-seccion-discography .contenedor-album .contenedor-titulo-album .titulo-album {
+  font-family: "Oswald", sans-serif;
+  grid-area: titulo;
+  font-size: 1.5em;
+  text-align: center;
+}
+body .main-seccion-discography .contenedor-album .contenedor-tracklist-album {
+  grid-area: tracklist;
+  margin: 0.5em;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+body .main-seccion-discography .contenedor-album .contenedor-tracklist-album .titulo {
+  text-align: center;
+  font-family: "Oswald", sans-serif;
+  font-weight: bold;
+  color: #333267;
+  font-size: 1.3em;
+  margin-bottom: 2em;
+}
+body .main-seccion-discography .contenedor-album .contenedor-tracklist-album .contenedor-lista {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-left: 0.5em;
+  box-sizing: border-box;
+  width: 70%;
+}
+body .main-seccion-discography .contenedor-album .contenedor-tracklist-album .contenedor-lista li {
+  list-style-type: none;
+  font-family: "Roboto Condensed", sans-serif;
+}
+
+@media (min-width: 500px) {
+  body .main-seccion-discography .contenedor-album .envoltura-imagen-album .contenedor-imagen-album .img-album {
+    width: 70%;
+  }
+}
+@media (min-width: 768px) {
+  body .main-seccion-discography .contenedor-album {
+    grid-template-areas: "titulo titulo titulo titulo" "imagen imagen tracklist tracklist";
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+  }
+  body .main-seccion-discography .contenedor-album .envoltura-imagen-album .contenedor-imagen-album {
+    width: 100%;
+    align-items: flex-end;
+    justify-content: center;
+  }
+  body .main-seccion-discography .contenedor-album .envoltura-imagen-album .contenedor-imagen-album .img-album {
+    width: 70%;
+  }
+  body .main-seccion-discography .contenedor-album .contenedor-titulo-album {
+    margin-bottom: 2em;
+  }
+  body .main-seccion-discography .contenedor-tracklist-album .contenedor-lista {
+    width: 100%;
+  }
+}
+body main .contenedor-productos .producto {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 1em;
+  padding-bottom: 1em;
+}
+body main .contenedor-productos .producto .contenedor-img-producto {
+  box-sizing: border-box;
+  width: 77%;
+  background-color: rgb(7, 7, 7);
+  border: 3px solid #333267;
+  margin-bottom: 1em;
+}
+body main .contenedor-productos .producto .contenedor-img-producto .img-producto {
+  width: 100%;
+}
+body main .contenedor-productos .producto .contenedor-nombre-producto {
+  margin-bottom: 1em;
+}
+body main .contenedor-productos .producto .contenedor-nombre-producto .nombre-producto {
+  font-family: "Oswald", sans-serif;
+}
+body main .contenedor-productos .producto .contenedor-precio-producto {
+  margin-bottom: 1em;
+}
+body main .contenedor-productos .producto .contenedor-precio-producto .precio-producto {
+  font-weight: bold;
+}
+body main .contenedor-productos .producto .contenedor-botones-compra {
+  margin-bottom: 1em;
+  box-sizing: border-box;
+  width: 50%;
+}
+body main .contenedor-productos .producto .contenedor-botones-compra ul {
+  list-style-type: none;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  padding-left: 0 !important;
+}
+body main .contenedor-productos .producto .contenedor-botones-compra ul .botones-compra {
+  padding: 0.425em;
+  background-color: #563267;
+  font-weight: bold;
+  color: white;
+  text-decoration: none;
+  border: 2px solid transparent;
+  border-radius: 3px;
+}
+
+@media (min-width: 500px) {
+  body main .contenedor-productos .producto .contenedor-img-producto {
+    width: 60%;
+  }
+  body main .contenedor-productos .producto .contenedor-botones-compra {
+    width: 30%;
+  }
+}
+@media (min-width: 768px) {
+  body main .contenedor-productos {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    flex-wrap: wrap;
+  }
+  body main .contenedor-productos .producto {
+    box-sizing: border-box;
+    width: 28%;
+  }
+  body main .contenedor-productos .producto .contenedor-img-producto {
+    width: 100%;
+  }
+  body main .contenedor-productos .producto .contenedor-botones-compra {
+    width: 70%;
+  }
+  body main .contenedor-productos .producto .contenedor-botones-compra .botones-compra:hover {
+    border: 2px solid white;
+  }
+}
+body footer {
+  background-color: #303030;
+}
+body footer section .footer-derechos {
+  text-align: center;
+  padding-top: 10px;
+}
+body footer .contenedor-redes {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+@media (min-width: 768px) {
+  body footer .contenedor-redes {
+    justify-content: right;
+  }
+}/*# sourceMappingURL=style.css.map */

@@ -1,0 +1,23 @@
+@import "variables";
+// mobile first 0px-500px
+*{margin: 0;
+padding: 0;
+}
+
+body{
+    background-image: url(../media/imgs/textura-fondo.jpg);
+    font-family: 'Roboto', sans-serif !important;
+    color: aliceblue !important;
+    .envoltura-titulo-gigante{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        .contenedor-titulo-gigante{
+            box-sizing: border-box;
+            .titulo-gigante{
+                font-size: $fontsize_titulo_gigante;
+                font-weight: bold;
+            }
+        }
+    }
+}

@@ -1,0 +1,160 @@
+@import "breakpoints";
+@import "variables";
+// mobile first 0px-500px
+body{
+    .envoltura-titulo-gigante{
+        .contenedor-titulo-gigante{
+            width: 77%;
+        }
+    }
+    .envoltura-presentacion-tour{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-top: 2em;
+        .contenedor-presentacion-tour{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        box-sizing: border-box;
+        width: 50%;
+        border: 6px double $color_bordes;
+        padding: 5px;
+        background-color: black;
+            .contenedor-imagen-tour{
+            box-sizing: border-box;
+            width: 100%;
+            .img-tour{
+                width: 100%;
+                }
+            }
+        }
+        .contenedor-titulo-tour{
+            font-size: 30px;
+            text-align: center;
+            font-family: 'Oswald', sans-serif;
+        }
+    }
+    .main-seccion-tour{
+        .contenedor-titulo-tabla{
+            .titulo-tabla{
+                text-align: center;
+                padding-top: 1.5em;
+                padding-bottom: 1em;
+                font-weight: bold;
+                font-size: 40px;
+            }
+        }
+        .fechas-tour-tabla{
+            background: linear-gradient(0deg, rgba(7,7,7,0.8183648459383753) 0%, rgba(0,0,0,1) 50%, rgba(7,7,7,0.4962359943977591) 100%);
+            .fechas-tour-celda-descripcion{
+                border-top: 1px solid rgba(255, 255, 255, 0.2);
+                border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+                .fechas-tour-data{
+                    .fechas-tour-fecha{
+                        font-weight: bolder;
+                        text-align: center;
+                        color: $color_titulos;
+                        p{
+                            margin-bottom: 0.5rem;
+                        }
+                    }
+                    .fechas-tour-evento{
+                        .fechas-tour-nombre-evento{
+                            text-align: center;
+                            p{
+                                margin-bottom: 0.5rem;
+                            }
+                        }
+                        .fechas-tour-ubicacion{
+                            text-align: center;
+                            p{
+                                margin-bottom: 0.5rem;
+                            }
+                        }
+                    }
+                    .boton-compra-tickets{
+                        display: flex;
+                        flex-direction: column;
+                        align-items: center;
+                        padding-bottom: 0.5em;
+                        padding-top: 0.5em;
+                        .boton-tickets{
+                            padding: $padding_boton;
+                            background-color: $color_boton;
+                            font-weight: bold;
+                            text-decoration: none;
+                            font-weight: bold;
+                            color: white;
+                            border: 2px solid transparent;
+                            border-radius: 3px;
+                        }
+                    }
+                }
+            }
+        }
+        .contenedor-aviso{
+            font-family: 'Oswald', sans-serif;
+            font-size: 30px;
+            text-align: center;
+            margin-top: 2em;
+            margin-bottom: 2em;
+        }
+    }
+}
+
+@include tablet{
+    body{
+        main{
+            .fechas-tour-tabla{
+                margin-left: 5em;
+                margin-right: 5em;
+            }
+        }
+    }
+}
+
+@include pc{
+    body{
+        .envoltura-presentacion-tour{
+            .contenedor-presentacion-tour{
+                width: 35%;
+            }
+        }
+        .main-seccion-tour{
+            .fechas-tour-tabla{
+                .fechas-tour-celda-descripcion{
+                    .fechas-tour-data{
+                        display: grid;
+                        grid-template-areas: 
+                        "fecha fecha boton"
+                        "evento evento boton";
+                        grid-template-columns: 1fr 1fr 1fr;
+                        align-items: center;
+                        .fechas-tour-fecha{
+                            grid-area: fecha;
+                            display: flex;
+                            flex-direction: row;
+                            justify-content: flex-start;
+                            text-align: center;
+                        }
+                        .fechas-tour-evento{
+                            grid-area: evento;
+                            display: flex;
+                            flex-direction: row;
+                            justify-content: space-between;
+                        }
+                        .boton-compra-tickets{
+                            grid-area: boton;
+                            .boton-tickets{
+                                &:hover{
+                                    border: 2px solid white;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
